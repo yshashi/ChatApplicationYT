@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center text-dark mt-5">Welcome to ChatHUB</h2>
+      <div class="text-center mb-5 text-dark">Please Join the Room to start Chatting</div>
+      <div class="card my-5">
+
+        <form [formGroup]="joinRoomForm" class="card-body cardbody-color p-lg-5">
+
+          <div class="text-center">
+            <img src="https://cdn.pixabay.com/photo/2023/07/24/23/30/chat-8147986_1280.jpg"
+              class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
+          </div>
+
+          <div class="mb-3">
+            <input formControlName="user" type="text" class="form-control" id="displayname" aria-describedby="emailHelp"
+              placeholder="Display Name">
+          </div>
+          <div class="mb-3">
+            <input formControlName="room" type="text" class="form-control" id="roomname" placeholder="Room Name">
+          </div>
+          <div class="text-center">
+            <button [disabled]="joinRoomForm.invalid" (click)="joinRoom()" type="submit" class="btn btn-color px-5 mb-5 w-100">Join</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
